@@ -1,0 +1,9 @@
+.img-wrapper {
+    height: 22vw;
+    margin: 0 auto;
+}
+
+.card-img-top {
+    max-height: 340px;
+}
+

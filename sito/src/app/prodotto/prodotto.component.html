@@ -1,0 +1,30 @@
+<div class="productBlock">
+    <div class="productSubBlock">
+      <div class="productData">
+        <h2 class="productName">{{ prodotto?.name }} - Custom Color</h2>
+        <p class="productSubName">Mug / 123</p>
+        <p class="productDescription">{{ prodotto?.description }}</p>
+        <p class="productPrice">{{ prodotto?.price }}€</p>
+        <button class="add-to-cart" (click)="addToCart()">Add to cart</button>
+      </div>
+        <img [src]="prodotto?.image" class="productView">  
+    </div>
+  </div>
+  
+  
+  <div class="similarBlock">
+  
+    <h1 class="similarProductsTitle">Similar Products</h1>
+  
+    <div class="scrollProducts">
+      <div *ngFor="let prodotto of prodottiSimili" class="products">
+        <a [routerLink]="['/products/', prodotto.name]" class="LinkProd">
+          <div>
+            <img [src]="prodotto.image" class="prod-image">
+            <p class="nome-prod">{{ prodotto.name }}</p>
+            <p class="prod-descrizione">{{ prodotto.description }}</p>
+          </div>
+        </a>
+      </div>
+      </div>
+  </div>
